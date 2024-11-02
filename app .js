@@ -25,6 +25,9 @@ mongoose.connection.on("connected", () => console.log("MongoDB Connected"));
 mongoose.connection.on("error", (err) => console.log("MongoDB Error", err));
 
 
+app.get("/",(request,response)=>{
+    response.send("server Runnig successfully");
+})
 
 
 app.post("/api/signup", async (req,res)=>{
